@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2021-10-12
+  time: 2021-10-12 14:25:57
+  movie_title: MyString
+  movie_runtime: MyString
+
+two:
+  date: 2021-10-12
+  time: 2021-10-12 14:25:57
+  movie_title: MyString
+  movie_runtime: MyString

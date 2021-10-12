@@ -5,9 +5,9 @@ addons:
   postgresql: 9.6
 script:
 - bundle exec rails db:{create,migrate} RAILS_ENV=test
-- bundle exec rspec
+- bundle exec rspec -fd
 deploy:
   provider: heroku
-  api_key:
-  app:
+  api_key: bf7f9f535c5e476a3abfc29db567222c
+  app: superviewingparty
   run: rails db:migrate
