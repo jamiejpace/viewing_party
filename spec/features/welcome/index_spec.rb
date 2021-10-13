@@ -47,5 +47,16 @@ RSpec.describe "welcome page" do
       expect(current_path).to eq(root_path)
       expect(page).to have_content("Unable to log in, please try again.")
     end
+
+    it "when given email does not exist" do
+
+      fill_in :email, with: "bb@chonkycat.com"
+      fill_in :password, with: @user.password
+
+      click_button "Log In"
+
+      expect(current_path).to eq(root_path)
+      expect(page).to have_content("Unable to log in, please try again.")
+    end
   end
 end
