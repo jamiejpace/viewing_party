@@ -13,6 +13,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def new
+    
+  end
+
   def dashboard
     @user = current_user
   end
