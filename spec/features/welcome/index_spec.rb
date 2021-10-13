@@ -35,6 +35,13 @@ RSpec.describe "welcome page" do
     expect(page).to have_content("Successfully logged in!")
   end
 
+  it "can redirect to registration page" do
+
+    click_link "Register for an Account"
+
+    expect(current_path).to eq(new_user_path)
+  end
+
   #sad paths
   describe "can redirect back to login page with error message" do
     it "when given partial login credentials" do
