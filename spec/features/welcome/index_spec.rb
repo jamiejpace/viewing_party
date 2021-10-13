@@ -37,7 +37,7 @@ RSpec.describe "welcome page" do
 
   #sad paths
   describe "can redirect back to login page with error message" do
-    it "when no or partial credentials given" do
+    it "when given partial login credentials" do
 
       fill_in :email, with: @user.email
       fill_in :password, with: ""
@@ -48,10 +48,21 @@ RSpec.describe "welcome page" do
       expect(page).to have_content("Unable to log in, please try again.")
     end
 
-    it "when given email does not exist" do
+    it "when given an invalid email" do
 
       fill_in :email, with: "bb@chonkycat.com"
       fill_in :password, with: @user.password
+
+      click_button "Log In"
+
+      expect(current_path).to eq(root_path)
+      expect(page).to have_content("Unable to log in, please try again.")
+    end
+
+    it "when given an invalid password" do
+
+      fill_in :email, with: @user.email
+      fill_in :password, with: "slothsinspace42"
 
       click_button "Log In"
 
