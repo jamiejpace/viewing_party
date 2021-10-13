@@ -1,1 +1,10 @@
-<h1>User Registration Page</h1>
+<h1>Register for an Account</h1>
+<%= form_with model: @user, local: true do |f| %>
+  <%= f.label :email, 'Email:' %>
+  <%= f.text_field :email %>
+  <%= f.label :password, 'Password:' %>
+  <%= f.password_field :password %>
+  <%= f.label :password_confirmation, 'Password Confirmation:' %>
+  <%= f.password_field :password_confirmation %>
+  <%= f.submit 'Register' %>
+<% end %>

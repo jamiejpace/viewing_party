@@ -39,7 +39,7 @@ RSpec.describe "welcome page" do
 
     click_link "Register for an Account"
 
-    expect(current_path).to eq(new_user_path)
+    expect(current_path).to eq(registration_path)
   end
 
   #sad paths
