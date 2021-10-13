@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       redirect_to user_dashboard_path(user.id)
     else
       flash[:error] = "Unable to log in, please try again."
-      render root_path
+      redirect_to root_path
     end
   end
 
