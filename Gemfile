@@ -17,6 +17,7 @@ gem 'bootsnap'
 gem 'faraday'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
+gem 'email_validator' 
 
 group :development, :test do
   gem 'pry'
