@@ -24,4 +24,10 @@ RSpec.describe 'user dashboard page' do
      expect(page).to have_content("Viewing Parties")
    end
  end
+
+ it 'redirects to discover page with button' do
+   click_on "Discover Movies"
+
+   expect(current_path).to eq(discover_path)
+ end
 end
