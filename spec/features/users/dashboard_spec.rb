@@ -18,7 +18,7 @@ RSpec.describe 'user dashboard page' do
 
    within "#friends" do
      expect(page).to have_content("Friends")
-     expect(page).to have_field("Friend's Email")
+     expect(page).to have_field(:email, with: "Friend's Email")
      expect(page).to have_button("Add Friend")
    end
 
@@ -31,5 +31,14 @@ RSpec.describe 'user dashboard page' do
    click_on "Discover Movies"
 
    expect(current_path).to eq(discover_path)
+ end
+
+ it 'can add a friend to page and display added friend email' do
+  User.create!(email: "bb@aol.com", password_digest: "meow89234b")
+  fill_in :email, with: "bb@aol.com"
+  click_on "Add Friend"
+  save_and_open_page
+  expect(current_path).to eq(user_dashboard_path(@user.id))
+  expect(page).to have_content("bb@aol.com")
  end
 end

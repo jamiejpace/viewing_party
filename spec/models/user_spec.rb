@@ -6,8 +6,6 @@ RSpec.describe User do
     it { should have_many(:parties).through(:attendees) }
     it { should have_many(:friendships) }
     it { should have_many(:friends).through(:friendships) }
-    it { should have_many(:inverse_friendships) }
-    it { should have_many(:inverse_friends).through(:inverse_friendships) }
   end
 
   describe "validations" do
