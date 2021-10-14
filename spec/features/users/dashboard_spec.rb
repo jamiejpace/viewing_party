@@ -18,6 +18,8 @@ RSpec.describe 'user dashboard page' do
 
    within "#friends" do
      expect(page).to have_content("Friends")
+     expect(page).to have_field("Friend's Email")
+     expect(page).to have_button("Add Friend")
    end
 
    within "#parties" do

@@ -1,4 +1,14 @@
 class UsersController < ApplicationController
+
+  # def index
+  #   @users = User.all
+  #   if params[:find_friend].present?
+  #     @users.find_by(email: params[:find_friend])
+  # form on our dashboard routes us to a controller where we can use a conditional to see if that param is present from the form and then we will find that user and create a friendship object with that user and the original user as the user and friend
+  # on the dashboard view we will have an instance variable @friends that represents all the friends for that particular user that we can then iterate through and get the email address to display in a list in the view
+  #   end
+  # end
+  
   def login
     user = User.find_by(email: params[:email].downcase)
     if user && user.authenticate(params[:password])
