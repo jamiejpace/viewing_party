@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     get "/dashboard", to: "users#dashboard"
   end
 
+  get "/discover", to: "movies#discover"
+
   get "/registration", to: "users#new"
   post "/login", to: "users#login"
 end

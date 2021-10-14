@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     user[:email] = user[:email].downcase
     new_user = User.new(user)
     if new_user.save
-      flash[:success] = "Welcome #{new_user.email}!"
+      flash[:success] = "Successfully created account!"
       session[:user_id] = new_user.id
       redirect_to user_dashboard_path(new_user.id)
     elsif user[:password] != user[:password_confirmation]

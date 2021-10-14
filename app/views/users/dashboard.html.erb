@@ -1,1 +1,12 @@
-<h1>User Dashboard</h1>
+<div id="Welcome-message">
+  <h1>🍿<%= "Welcome #{@user.email}!" %>🎥</h1>
+  <%= button_to "Discover Movies", discover_path %>
+</div>
+
+<div id="friends">
+  <h3>Friends</h3>
+</div>
+
+<div id="parties">
+  <h3>Viewing Parties</h3>
+</div>
