@@ -23,7 +23,7 @@ RSpec.describe 'user registration page' do
     user2 = User.last
 
     expect(current_path).to eq(user_dashboard_path(user2.id))
-    expect(page).to have_content("Welcome #{user2.email}!")
+    expect(page).to have_content("Successfully created account!")
   end
 
   it 'can redirect back to registration page with error if password does not match' do

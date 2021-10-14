@@ -1,1 +1,25 @@
-<h1>User Dashboard</h1>
+<div id="Welcome-message">
+  <h1>🍿<%= "Welcome #{@user.email}!" %>🎥</h1>
+  <%= button_to "Discover Movies", discover_path, method: :get %>
+</div>
+
+<div id="friends">
+  <h3>Friends</h3>
+  <%= form_with url: user_friendships_path(@user.id), local: true do |f| %>
+    <%= f.text_field :email, :value => "Friend's Email" %>
+    <%= f.submit 'Add Friend' %>
+  <% end %>
+  <% if @user.friends.empty? %>
+    <%= "You currently have no friends 😭"  %>
+  <% else %>
+    <ul>
+      <% @user.friends.each do |friend| %>
+        <li><%= friend.email %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
+<div id="parties">
+  <h3>Viewing Parties</h3>
+</div>
