@@ -9,11 +9,15 @@
     <%= f.text_field :email, :value => "Friend's Email" %>
     <%= f.submit 'Add Friend' %>
   <% end %>
-  <ul>
-    <% @user.friends.each do |friend| %>
-      <li><%= friend.email %></li>
-    <% end %>
-  </ul>
+  <% if @user.friends.empty? %>
+    <%= "You currently have no friends 😭"  %>
+  <% else %>
+    <ul>
+      <% @user.friends.each do |friend| %>
+        <li><%= friend.email %></li>
+      <% end %>
+    </ul>
+  <% end %>
 </div>
 
 <div id="parties">
