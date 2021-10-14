@@ -21,10 +21,10 @@ class UsersController < ApplicationController
       session[:user_id] = new_user.id
       redirect_to user_dashboard_path(new_user.id)
     elsif user[:password] != user[:password_confirmation]
-      flash[:error] = "Passwords do not match, please try again."
+      flash[:error] = 'Passwords do not match, please try again.'
       redirect_to registration_path
     else
-      flash[:error] = "Unable to register, please try again."
+      flash[:error] = 'Unable to register, please try again.'
       redirect_to registration_path
     end
   end

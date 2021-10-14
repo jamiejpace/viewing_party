@@ -54,4 +54,15 @@ RSpec.describe 'user registration page' do
     expect(current_path).to eq(registration_path)
     expect(page).to have_content("Unable to register, please try again.")
   end
+
+  it 'can redirect back to registration page with error if email not correct format' do
+    fill_in :email, with: "odell"
+    fill_in :password, with: "barkbark"
+    fill_in :password_confirmation, with: "barkbark"
+
+    click_on "Register"
+
+    expect(current_path).to eq(registration_path)
+    expect(page).to have_content("Unable to register, please try again.")
+  end
 end
