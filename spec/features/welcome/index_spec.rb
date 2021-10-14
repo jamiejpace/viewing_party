@@ -8,11 +8,6 @@ RSpec.describe "welcome page" do
   end
 
   it "can display welcome information" do
-    # When a user visits the root path they should be on the welcome page which includes:
-    #   Welcome message x
-    #   Brief description of the application x
-    #   Button to Log in x
-    #   Link to Registration x
     expected = "Viewing Party is an application in which users can explore movie options and create a viewing party event for the user and friends."
 
     expect(page).to have_content("Welcome to Viewing Party!")
@@ -21,11 +16,7 @@ RSpec.describe "welcome page" do
     expect(page).to have_link("Register for an Account")
   end
 
-  #happy path
   it "can redirect to user log in page" do
-    # Details: Implement basic auth in the application allowing a user to log in with an email and password.
-    # The password should be stored in the database using bcrypt.
-
     fill_in :email, with: @user.email
     fill_in :password, with: @user.password
 
@@ -36,16 +27,13 @@ RSpec.describe "welcome page" do
   end
 
   it "can redirect to registration page" do
-
     click_link "Register for an Account"
 
-    expect(current_path).to eq(new_user_path)
+    expect(current_path).to eq(registration_path)
   end
 
-  #sad paths
   describe "can redirect back to login page with error message" do
     it "when given partial login credentials" do
-
       fill_in :email, with: @user.email
       fill_in :password, with: ""
 
@@ -56,7 +44,6 @@ RSpec.describe "welcome page" do
     end
 
     it "when given an invalid email" do
-
       fill_in :email, with: "bb@chonkycat.com"
       fill_in :password, with: @user.password
 
@@ -67,7 +54,6 @@ RSpec.describe "welcome page" do
     end
 
     it "when given an invalid password" do
-
       fill_in :email, with: @user.email
       fill_in :password, with: "slothsinspace42"
 
