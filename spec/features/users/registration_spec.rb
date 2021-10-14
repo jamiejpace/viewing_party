@@ -44,14 +44,14 @@ RSpec.describe 'user registration page' do
     expect(page).to have_content("Passwords do not match, please try again.")
   end
 
-  it 'can redirect back to registration page with error if password does not match' do
-    fill_in :email, with: "mose@gmail.com"
-    fill_in :password, with: "snacksplease"
+  it 'can redirect back to registration page with error if invalid credentials' do
+    fill_in :email, with: "odell@gmail.com"
+    fill_in :password, with: "barkbark"
     fill_in :password_confirmation, with: "barkbark"
 
     click_on "Register"
 
     expect(current_path).to eq(registration_path)
-    expect(page).to have_content("Passwords do not match, please try again.")
+    expect(page).to have_content("Unable to register, please try again.")
   end
 end
