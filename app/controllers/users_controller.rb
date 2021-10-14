@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   def create
     user = user_params
+    user[:email] = user[:email].downcase
     new_user = User.new(user)
     if new_user.save
       flash[:success] = "Welcome #{new_user.email}!"
