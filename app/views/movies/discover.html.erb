@@ -1,1 +1,9 @@
+<center>
 <h1>Movie Discover Page</h1>
+<%= button_to "Discover Top 40 Movies!", movies_path %>
+<br>
+<%= form_with url: movies_path, method: :get, local: true do |f| %>
+  <%= f.text_field :movie_search, :value => "Search By Movie Title" %>
+  <%= f.submit 'Find Movies' %>
+<% end %>
+</center>

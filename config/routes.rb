@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :friendships, only: [:create]
   end
 
+  resources :movies, only: [:index]
   get "/discover", to: "movies#discover"
 
   get "/registration", to: "users#new"
