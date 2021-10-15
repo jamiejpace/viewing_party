@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+ skip_before_action :require_current_user, only: [:new, :create]
 
   def login
     user = User.find_by(email: params[:email].downcase)
