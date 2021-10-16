@@ -9,4 +9,13 @@ RSpec.describe 'movie facade', :vcr do
     expect(movies.first.title).to be_a(String)
     expect(movies.count).to eq(40)
   end
+
+  it 'can return a custom list of movies given a search param' do
+    movies = MovieFacade.movie_search("Venom")
+
+    expect(movies).to be_an(Array)
+    expect(movies.first).to be_a(Movie)
+    expect(movies.first.title).to be_a(String)
+    expect(movies.first.title).to include("Venom")
+  end
 end
