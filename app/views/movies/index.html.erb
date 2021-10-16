@@ -7,10 +7,20 @@
   <%= f.submit 'Find Movies' %>
 <% end %>
 
-<% @movies.each_with_index do |movie, index| %>
-<div id="movie-<%= index %>">
-  <img src="https://image.tmdb.org/t/p/w300<%= movie.poster %>" >
-  <p>Title: <%= movie.title %> </p>
-  <p>Vote Average: <%= movie.vote_average %></p><br>
-</div>
+<% if @search_results %>
+  <%= @search_results.each_with_index do |movie, index| %>
+  <div id="movie-<%= index %>">
+    <img src="https://image.tmdb.org/t/p/w300<%= movie.poster %>" >
+    <p>Title: <%= movie.title %> </p>
+    <p>Vote Average: <%= movie.vote_average %></p><br>
+    </div>
+  <% end %>
+<% else %>
+  <% @movies.each_with_index do |movie, index| %>
+  <div id="movie-<%= index %>">
+    <img src="https://image.tmdb.org/t/p/w300<%= movie.poster %>" >
+    <p>Title: <%= movie.title %> </p>
+    <p>Vote Average: <%= movie.vote_average %></p><br>
+    </div>
+  <% end %>
 <% end %>
