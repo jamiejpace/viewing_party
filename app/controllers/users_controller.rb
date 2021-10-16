@@ -1,15 +1,8 @@
 class UsersController < ApplicationController
+  skip_before_action :require_current_user, only: %i[new create]
 
-  def login
-    user = User.find_by(email: params[:email].downcase)
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      flash[:success] = 'Successfully logged in!'
-      redirect_to user_dashboard_path(user.id)
-    else
-      flash[:error] = 'Unable to log in, please try again.'
-      redirect_to root_path
-    end
+  def show
+    @user = current_user
   end
 
   def new; end
@@ -19,7 +12,7 @@ class UsersController < ApplicationController
     user[:email] = user[:email].downcase
     new_user = User.new(user)
     if new_user.save
-      flash[:success] = "Successfully created account!"
+      flash[:success] = 'Successfully created account!'
       session[:user_id] = new_user.id
       redirect_to user_dashboard_path(new_user.id)
     elsif user[:password] != user[:password_confirmation]
@@ -29,10 +22,6 @@ class UsersController < ApplicationController
       flash[:error] = 'Unable to register, please try again.'
       redirect_to registration_path
     end
-  end
-
-  def dashboard
-    @user = current_user
   end
 
   private
