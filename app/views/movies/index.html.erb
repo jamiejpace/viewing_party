@@ -7,8 +7,10 @@
   <%= f.submit 'Find Movies' %>
 <% end %>
 
-<% @movies.each do |movie| %>
+<% @movies.each_with_index do |movie, index| %>
+<div id="movie-<%= index %>">
   <img src="https://image.tmdb.org/t/p/w300<%= movie.poster %>" >
-  <p><%= movie.title %>
-  Vote Average: <%= movie.vote_average %></p>
+  <p>Title: <%= movie.title %> </p>
+  <p>Vote Average: <%= movie.vote_average %></p><br>
+</div>
 <% end %>
