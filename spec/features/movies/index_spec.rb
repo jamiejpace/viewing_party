@@ -17,4 +17,8 @@ RSpec.describe 'movies index page', :vcr do
       expect(page).to have_content("Vote Average:")
     end
   end
+
+  it 'displays results of a search given a search param' do
+
+  end
 end

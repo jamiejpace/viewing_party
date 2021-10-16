@@ -6,6 +6,12 @@ class MovieService
       body[:results]
     end
 
+    def search_movies(search_param)
+      response = conn.get("/3/search/movie?page=1&include_adult=false&query=#{search_param}")
+      body = JSON.parse(response.body, symbolize_names: true)
+      body[:results]
+    end
+
     private
 
     def conn

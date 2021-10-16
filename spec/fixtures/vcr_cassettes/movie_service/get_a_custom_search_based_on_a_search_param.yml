@@ -1,0 +1,160 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=Private movie key&include_adult=false&page=1&query=venom
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 16 Oct 2021 20:27:22 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=600
+      X-Edge-Origin-Shield-Skipped:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 dedf57685198cdf20aa5d9f523b82ec1.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DFW55-C3
+      X-Amz-Cf-Id:
+      - jNzQfbDKDK6LGRwwviP8ogf2CgwA0oqcEXd1FU_PNsOB7e9PI570Wg==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"page":1,"results":[{"adult":false,"backdrop_path":"/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg","genre_ids":[878,28],"id":335983,"original_language":"en","original_title":"Venom","overview":"Investigative
+        journalist Eddie Brock attempts a comeback following a scandal, but accidentally
+        becomes the host of Venom, a violent, super powerful alien symbiote. Soon,
+        he must rely on his newfound powers to protect the world from a shadowy organization
+        looking for a symbiote of their own.","popularity":3096.416,"poster_path":"/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg","release_date":"2018-09-28","title":"Venom","video":false,"vote_average":6.8,"vote_count":11722},{"adult":false,"backdrop_path":"/lNyLSOKMMeUPr1RsL4KcRuIXwHt.jpg","genre_ids":[878,28],"id":580489,"original_language":"en","original_title":"Venom:
+        Let There Be Carnage","overview":"After finding a host body in investigative
+        reporter Eddie Brock, the alien symbiote must face a new enemy, Carnage, the
+        alter ego of serial killer Cletus Kasady.","popularity":9295.845,"poster_path":"/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg","release_date":"2021-09-30","title":"Venom:
+        Let There Be Carnage","video":false,"vote_average":7.2,"vote_count":627},{"adult":false,"backdrop_path":"/wXCelVZcQE0bSsBC0r6LNsJIRnI.jpg","genre_ids":[27,53],"id":7182,"original_language":"en","original_title":"Venom","overview":"A
+        group of teenagers fear for their lives in the swamps of Louisiana, chased
+        by Mr. Jangles, a man possessed by 13 evil souls, and now relentless in his
+        pursuit of new victims.","popularity":254.538,"poster_path":"/hCMTpv1I9KK90ApxXDyaf8SwJcf.jpg","release_date":"2005-09-16","title":"Venom","video":false,"vote_average":5.5,"vote_count":210},{"adult":false,"backdrop_path":"/xHbpL55I16JB7f1oV2iR57Gxh8Q.jpg","genre_ids":[27,53],"id":30789,"original_language":"en","original_title":"Venom","overview":"International
+        terrorists attempt to kidnap a wealthy couple''s child. Their plan comes unstuck
+        when a deadly Black Mamba, sent by mistake instead of a harmless snake, escapes
+        and the terrorists and several hostages are trapped in the boy''s London home.","popularity":175.163,"poster_path":"/oGspQXUm4BtFioE6dHLwQGJqaGu.jpg","release_date":"1981-11-28","title":"Venom","video":false,"vote_average":6.2,"vote_count":46},{"adult":false,"backdrop_path":null,"genre_ids":[16],"id":50410,"original_language":"en","original_title":"Spider-Man:
+        The Venom Saga","overview":"A space-shuttle crash-landing puts the famous
+        web-slinger Spider-Man in contact with a living alien substance that bonds
+        to his suit and enhances his super-powers. Unfortunately, the alien substance
+        begins to change him and he feels the pull of evil, so discards the suit.
+        The evil attaches itself to another host leading to an epic confrontation
+        between good and evil.","popularity":362.439,"poster_path":"/ilmsQLtthtcD8EU1k25cp0xFQ9a.jpg","release_date":"1994-06-07","title":"Spider-Man:
+        The Venom Saga","video":true,"vote_average":6.1,"vote_count":57},{"adult":false,"backdrop_path":null,"genre_ids":[53],"id":204973,"original_language":"en","original_title":"Venom","overview":"After
+        a car breaks down in an isolated desert, a mother and young daughter are relentlessly
+        pursued by a deadly snake","popularity":132.712,"poster_path":"/xooRYiNbZtwNUdx0p60QvWxuxeD.jpg","release_date":"2011-07-15","title":"Venom","video":false,"vote_average":6,"vote_count":12},{"adult":false,"backdrop_path":"/cB01tluqfdtwdi2JAg7Ao6m3ZiB.jpg","genre_ids":[27],"id":186351,"original_language":"en","original_title":"Venom","overview":"A
+        Nazi scientist and a woman known as a \"spider goddess\" attempt to develop
+        a nerve gas made from spider venom.","popularity":46.796,"poster_path":"/qf58eUwhZqWRts3OSa5TTb3VkOM.jpg","release_date":"1971-01-01","title":"Venom","video":false,"vote_average":5.5,"vote_count":6},{"adult":false,"backdrop_path":null,"genre_ids":[28,12,27,53],"id":29889,"original_language":"en","original_title":"Silent
+        Venom","overview":"An American submarine traveling through dangerous territorial
+        waters is put in even more danger when two scientists bring venomous snakes
+        on board.","popularity":68.053,"poster_path":"/hcWtTEynhNj1PmCoax5y8Qejoky.jpg","release_date":"2009-06-02","title":"Silent
+        Venom","video":false,"vote_average":5.3,"vote_count":22},{"adult":false,"backdrop_path":"/t6Ovw9kvfjcOKkknXcSNXtUIIly.jpg","genre_ids":[14],"id":573336,"original_language":"en","original_title":"Red
+        Venom Kills","overview":"Alluring young Scarlet Silk is a vengeful hooker
+        gone crazy after her parents murder, and being stabbed several times. The
+        audacious naughty teen changes her destiny near death by discovering a mysterious
+        crate from the Amazon jungle left behind by her mother that has two mystical
+        bottles of red venom; one that heals, and the other that poisons. Scarlet
+        then transcends herself into becoming the deadliest predator in the jungle,
+        as her mission is to inject her poisonous venom into the diabolical underworld
+        queen Dark Widow.","popularity":46.626,"poster_path":"/jxtV9aqxBLWD55PUP7xv5Qu7uTL.jpg","release_date":"2018-12-04","title":"Red
+        Venom Kills","video":false,"vote_average":3,"vote_count":2},{"adult":false,"backdrop_path":null,"genre_ids":[27,53],"id":811847,"original_language":"en","original_title":"Venom
+        Coast","overview":"As a group of wealthy friends decide to celebrate the launch
+        of their tech company with a trip to Cabo, they get more than they bargained
+        for when a mysterious man offers to escort them on his family''s vintage cruise
+        ship. Once on board, the family''s ulterior motives become clear and the friends
+        are hunted one by one. With everyone stranded at sea with little hope and
+        no connection to the outside world, a Coast Guard team engages for a final
+        deadly confrontation.","popularity":30.988,"poster_path":"/t6aEt4o0j2Hzm0CXuyYaram0Zu7.jpg","release_date":"2021-03-27","title":"Venom
+        Coast","video":false,"vote_average":3,"vote_count":2},{"adult":false,"backdrop_path":"/EXJrCRBYAPffNuMQbX7irsbrRn.jpg","genre_ids":[16,28],"id":622230,"original_language":"en","original_title":"LEGO
+        Marvel Spider-Man: Vexed by Venom","overview":"Thanks to Green Goblin and
+        Venom, tech theft is now at an all-time high. Can our Friendly Neighborhood
+        Spider-Man put an end to their mysterious villainous scheme before all of
+        New York City is destroyed?","popularity":77.257,"poster_path":"/gTo2r8nNU3ZYAS6DqdeSp1VEqkq.jpg","release_date":"2019-08-03","title":"LEGO
+        Marvel Spider-Man: Vexed by Venom","video":false,"vote_average":7.1,"vote_count":7},{"adult":false,"backdrop_path":"/AiXlESFTe8tguunUUFy08oUxTAB.jpg","genre_ids":[16,10751],"id":22859,"original_language":"en","original_title":"G.I.
+        Joe: Valor vs. Venom","overview":"G.I. Joe, perennial icon of American boyhood,
+        gets a 21st-century update in a new CGI-animated children''s series of thrilling
+        military adventure. In this action-packed movie, as America''s daring, highly
+        trained special mission force, the G.I. Joe team faces its greatest threat
+        yet from the evil Cobra Organization. Under the direction of Cobra Commander,
+        DNA from the world''s most ferocious animals","popularity":40.774,"poster_path":"/nl7wFvE3BAMKXBqdTBjs8cKXEyu.jpg","release_date":"2004-09-14","title":"G.I.
+        Joe: Valor vs. Venom","video":false,"vote_average":7.1,"vote_count":5},{"adult":false,"backdrop_path":null,"genre_ids":[99],"id":657715,"original_language":"zh","original_title":"World''s
+        Worst Venom","overview":"","popularity":18.222,"poster_path":"/s2BxZxz5oZNHvPp2nO9MPf7NzHA.jpg","release_date":"2007-10-10","title":"World''s
+        Worst Venom","video":false,"vote_average":0,"vote_count":0},{"adult":false,"backdrop_path":"/aA82ItPcd2hpbw6T4XTVU1SaWNR.jpg","genre_ids":[99],"id":476395,"original_language":"en","original_title":"Venom
+        Islands","overview":"Venom expert Dr. Bryan Fry embarks on a dangerous island
+        journey to uncover the deadly secrets of vipers, stonefish and the formidable
+        Komodo dragon.","popularity":14.401,"poster_path":"/gw6Zilias6KoqlwciXkcSujRh35.jpg","release_date":"2012-01-01","title":"Venom
+        Islands","video":false,"vote_average":8,"vote_count":1},{"adult":false,"backdrop_path":null,"genre_ids":[],"id":835490,"original_language":"en","original_title":"Venom","overview":"When
+        a journalist comes close to breaking a story about a drug smuggler, the mastermind
+        retaliates by unleashing a trained cobra in her home.","popularity":10.328,"poster_path":null,"release_date":"","title":"Venom","video":false,"vote_average":10,"vote_count":1},{"adult":false,"backdrop_path":null,"genre_ids":[10402],"id":186504,"original_language":"en","original_title":"Venom:
+        Live in London","overview":"Recorded Live at the Hammersmith Odeon Theatre,
+        London, 8 October 1985. Can the bombast and fury of one of Extreme Metal''s
+        founders truly be captured on video? Turn it up and find out! Touring supporting
+        1985''s POSSESSED, this would become one of the last documents of the original
+        lineup, as guitarist Mantas would depart not long after. Songs: 01 - Too Loud
+        (For the Crowd) - 02 - Black Metal - 03 - Nightmare - 04 - Countess Bathory
+        - 05 - The Seven Gates of Hell (Bass Solo) - 06 - Buried Alive - 07 - Don''t
+        Burn The Witch - 08 - In Nomine Satanas - 09 - Welcome To Hell - 10 - Warhead
+        (Guitar Solo) - 11 - Schizo - 12 - Satanachist - 13 - Bloodlust - 14 - Witching
+        Hour","popularity":20.764,"poster_path":"/bT9KtEa5klcNh4JflTTnYd5wWFZ.jpg","release_date":"2005-03-29","title":"Venom:
+        Live in London","video":false,"vote_average":6,"vote_count":2},{"adult":false,"backdrop_path":null,"genre_ids":[99,10770],"id":823460,"original_language":"en","original_title":"Venom","overview":"A
+        BBC Earth documentary inside the world of the most venomous creatures on Earth,
+        with stories from survivors of deadly venom attacks from animals coupled with
+        3D graphic technology that showcases the effects of venom on the human body.","popularity":8.87,"poster_path":null,"release_date":"","title":"Venom","video":false,"vote_average":10,"vote_count":1},{"adult":false,"backdrop_path":null,"genre_ids":[99],"id":872157,"original_language":"en","original_title":"The
+        Venom Interviews","overview":"A crash course in the professional and scientific
+        work related to the field of venomous herpetology. The film covers diverse
+        topics, including biochemistry, biology, law and public policy, conservation,
+        venom collection, animal husbandry, antivenom production, emergency medicine,
+        veterinary medicine, toxicology and toxinology. The film follows the personal
+        and working lives of prominent experts in the field, beginning with their
+        childhood interest through their professional careers, with particular emphasis
+        on the sciences related to their work.","popularity":9.564,"poster_path":"/8LPYudyDC4C6QBt2dn1wDqNHgBV.jpg","release_date":"2016-01-10","title":"The
+        Venom Interviews","video":false,"vote_average":0,"vote_count":0},{"adult":false,"backdrop_path":null,"genre_ids":[],"id":338061,"original_language":"en","original_title":"Deadly
+        Venom: The Best of Sting","overview":"Sting battles \"The Russian Nightmare\"
+        Nikita Koloff in a Russian Chain Match, struggles to overcome injury as he
+        defends the WCW United States Heavyweight Title against \"Ravishing\" Rick
+        Rude, challenges former friend \"The Total Package\" Lex Luger for the WCW
+        World Heavyweight Title, leads his Squadron into War Games against the Dangerous
+        Alliance, tackles Cactus Jack in a falls-count-anywhere, defends the WCW World
+        Heavyweight Title against Big Van Vader, vanquishes Jake \"The Snake\" Roberts
+        in a Coal Miner''s Glove match, and faces Vader two more times, including
+        the \"White Castle of Fear\" leather strap match.  - Written by mariafan","popularity":11.415,"poster_path":"/25V9db2gLEqvFScpdAkWsenSGlv.jpg","release_date":"1993-11-09","title":"Deadly
+        Venom: The Best of Sting","video":false,"vote_average":0,"vote_count":0},{"adult":false,"backdrop_path":null,"genre_ids":[],"id":384151,"original_language":"en","original_title":"Venom:
+        [2015] Hellfest","overview":"01 - Rise  02 - Bloodlust  03 - Die Hard  04
+        - Long Haired Punks  05 - Grinding Teeth  06 - Buried Alive  07 - The Evil
+        One  08 - Welcome to Hell  09 - 1000 Days in Sodom  10 - Countess Bathory  11
+        - Warhead","popularity":5.254,"poster_path":null,"release_date":"2015-06-20","title":"Venom:
+        [2015] Hellfest","video":false,"vote_average":10,"vote_count":1}],"total_pages":3,"total_results":52}'
+  recorded_at: Sat, 16 Oct 2021 20:27:22 GMT
+recorded_with: VCR 6.0.0
