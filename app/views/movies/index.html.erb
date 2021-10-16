@@ -8,6 +8,7 @@
 <% end %>
 
 <% @movies.each do |movie| %>
+  <img src="https://image.tmdb.org/t/p/w300<%= movie.poster %>" >
   <p><%= movie.title %>
   Vote Average: <%= movie.vote_average %></p>
 <% end %>
