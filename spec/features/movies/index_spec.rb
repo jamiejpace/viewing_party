@@ -7,9 +7,9 @@ RSpec.describe 'movies index page', :vcr do
 
     visit movies_path
 
-    # movies = MovieFacade.top_40_movies
-    #
-    # expect(page).to have_content(movies.first.title)
-    # expect(page).to have_content(movies.first.vote_average)
+    movies = MovieFacade.top_40_movies
+
+    expect(page).to have_content(movies.first.title)
+    expect(page).to have_content(movies.first.vote_average)
   end
 end
