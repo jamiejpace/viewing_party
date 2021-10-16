@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
- skip_before_action :require_current_user, only: [:new, :create]
+  skip_before_action :require_current_user, only: %i[new create]
 
   def show
-   @user = current_user
+    @user = current_user
   end
 
   def new; end
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     user[:email] = user[:email].downcase
     new_user = User.new(user)
     if new_user.save
-      flash[:success] = "Successfully created account!"
+      flash[:success] = 'Successfully created account!'
       session[:user_id] = new_user.id
       redirect_to user_dashboard_path(new_user.id)
     elsif user[:password] != user[:password_confirmation]
@@ -23,7 +23,6 @@ class UsersController < ApplicationController
       redirect_to registration_path
     end
   end
-
 
   private
 

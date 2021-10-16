@@ -7,6 +7,4 @@ class MoviesController < ApplicationController
     #   do a thing here --> SearchFacade.movie(params[:movie_search])
     # end
   end
-
-
 end

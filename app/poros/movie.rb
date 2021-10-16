@@ -1,5 +1,4 @@
 class Movie
-
   attr_reader :title,
               :vote_average,
               :poster
