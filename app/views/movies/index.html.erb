@@ -8,7 +8,7 @@
 <% end %>
 
 <% if @search_results %>
-  <%= @search_results.each_with_index do |movie, index| %>
+  <% @search_results.each_with_index do |movie, index| %>
   <div id="movie-<%= index %>">
     <img src="https://image.tmdb.org/t/p/w300<%= movie.poster %>" >
     <p>Title: <%= movie.title %> </p>

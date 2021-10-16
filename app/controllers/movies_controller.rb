@@ -3,8 +3,13 @@ class MoviesController < ApplicationController
 
   def index
     @movies = MovieFacade.top_40_movies
-    @search_results = if params[:movie_search]
-      MovieFacade.movie_search(params[:movie_search])
+    if params[:movie_search] && !params[:movie_search].empty?
+      @search_results = MovieFacade.movie_search(params[:movie_search])
+    elsif params[:movie_search] && params[:movie_search].empty?
+      flash.now[:error] = "Please enter something. Anything. 😕"
+    else
+      flash.now[:error] = "No Search Results Found 😿"
+      redirect_to movies_path
     end
   end
 end
