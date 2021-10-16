@@ -6,3 +6,8 @@
   <%= f.text_field :movie_search, :value => "Search By Movie Title" %>
   <%= f.submit 'Find Movies' %>
 <% end %>
+
+<% @movies.each do |movie| %>
+  <p><%= movie.title %>
+  Vote Average: <%= movie.vote_average %></p>
+<% end %>

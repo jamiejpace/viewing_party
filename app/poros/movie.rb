@@ -1,10 +1,10 @@
-require 'rails_helper'
 class Movie
 
   attr_reader :title,
-              :average_vote
-              
+              :vote_average
+
   def initialize(data)
-    @title = data[0][:original_title]
+    @title = data[:title]
+    @vote_average = data[:vote_average]
   end
 end

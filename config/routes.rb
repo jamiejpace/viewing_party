@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   get "/discover", to: "movies#discover"
 
   get "/registration", to: "users#new"
-  post "/login", to: "users#login"
+  get "/login", to: "users#login"
 end
