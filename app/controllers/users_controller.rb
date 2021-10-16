@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
- skip_before_action :require_current_user, only: [:new, :create, :login]
+ skip_before_action :require_current_user, only: [:new, :create]
 
   def show
    @user = current_user
   end
-  
+
   def new; end
 
   def create
