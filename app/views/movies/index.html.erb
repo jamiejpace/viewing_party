@@ -1,26 +1,18 @@
-<h1>Search Results:</h1>
-
 <%= button_to "Discover Top 40 Movies!", movies_path, method: :get %>
 <br>
 <%= form_with url: movies_path, method: :get, local: true do |f| %>
-  <%= f.text_field :movie_search, :value => "Search By Movie Title" %>
+  <%= f.text_field :movie_search, value: "Search By Movie Title", required: true %>
   <%= f.submit 'Find Movies' %>
-<% end %>
+<% end %><br>
 
-<% if @search_results %>
-  <% @search_results.each_with_index do |movie, index| %>
-  <div id="movie-<%= index %>">
-    <img src="https://image.tmdb.org/t/p/w300<%= movie.poster %>" >
-    <p>Title: <%= movie.title %> </p>
-    <p>Vote Average: <%= movie.vote_average %></p><br>
-    </div>
-  <% end %>
+<% if @movies.empty? %>
+  <p><%= "No Search Results Found 😿" %></p>
 <% else %>
   <% @movies.each_with_index do |movie, index| %>
-  <div id="movie-<%= index %>">
-    <img src="https://image.tmdb.org/t/p/w300<%= movie.poster %>" >
-    <p>Title: <%= movie.title %> </p>
-    <p>Vote Average: <%= movie.vote_average %></p><br>
-    </div>
+    <div id="movie-<%= index %>">
+      <img src="https://image.tmdb.org/t/p/w300<%= movie.poster %>" >
+      <p>Title: <%= movie.title %> </p>
+      <p>Vote Average: <%= movie.vote_average %></p><br>
+      </div>
   <% end %>
 <% end %>
