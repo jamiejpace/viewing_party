@@ -1,10 +1,12 @@
 <h1>Register for an Account</h1>
 <%= form_with url: users_path, method: :post, local: true do |f| %>
   <%= f.label :email, 'Email:' %>
-  <%= f.text_field :email %>
+  <%= f.text_field :email %><br><br>
   <%= f.label :password, 'Password:' %>
-  <%= f.password_field :password %>
+  <%= f.password_field :password %><br><br>
   <%= f.label :password_confirmation, 'Password Confirmation:' %>
-  <%= f.password_field :password_confirmation %>
+  <%= f.password_field :password_confirmation %><br><br>
   <%= f.submit 'Register' %>
 <% end %>
+
+<p><%= link_to "Already Registered? Login Here", root_path %></p>

@@ -11,6 +11,7 @@ RSpec.describe 'user registration page' do
     expect(page).to have_content("Password:")
     expect(page).to have_content("Password Confirmation:")
     expect(page).to have_content("Register")
+    expect(page).to have_link("Already Registered? Login Here")
   end
 
   it 'can register user given valid credentials' do

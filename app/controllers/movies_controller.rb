@@ -2,9 +2,10 @@ class MoviesController < ApplicationController
   def discover; end
 
   def index
-    @movies = MovieFacade.top_40_movies
-    # @search_results = if params[:movie_search]
-    #   do a thing here --> SearchFacade.movie(params[:movie_search])
-    # end
+    @movies = if params[:movie_search]
+                MovieFacade.movie_search(params[:movie_search])
+              else
+                MovieFacade.top_40_movies
+              end
   end
 end
