@@ -18,5 +18,19 @@ class MovieFacade
       data = MovieService.find_movie(id)
       Movie.new(data)
     end
+
+    def movie_cast(id)
+      data = MovieService.find_cast(id)
+      data.map do |cast_data|
+        Cast.new(cast_data)
+      end
+    end
+
+    def movie_reviews(id)
+      data = MovieService.find_reviews(id)
+      data.map do |review_data|
+        Review.new(review_data)
+      end
+    end
   end
 end

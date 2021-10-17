@@ -4,3 +4,11 @@
 <p>Runtime: <%= @movie.runtime %> minutes</p>
 <p>Summary: <%= @movie.summary %></p>
 <p>Genre(s): <%= @movie.genre_names %></p>
+<p>Cast: <% @cast_members.each do |cast_member| %></p>
+  <p><%= cast_member.name %> as
+  <%= cast_member.role %></p>
+<% end %>
+<p>Reviews 📝<% @reviews.each do |review| %></p>
+  <p>Author: <%= review.author %></p>
+  <p><%= review.content %></p>
+<% end %>
