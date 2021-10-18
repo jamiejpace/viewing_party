@@ -1,12 +1,15 @@
 <img src="https://image.tmdb.org/t/p/w300<%= @movie.poster %>" >
-<p>Title: <%= @movie.title %></p>
-<p>Vote Average: <%= @movie.vote_average %></p>
+<h2>Title: <%= @movie.title %></h2>
+<%= button_to "Create a Viewing Party For This Movie!", new_party_path, method: :get %>
+<h4>Vote Average: <%= @movie.vote_average %></h4>
 <p>Runtime: <%= @movie.runtime %> minutes</p>
-<p>Summary: <%= @movie.summary %></p>
 <p>Genre(s): <%= @movie.genre_names %></p>
+<p>Summary: <%= @movie.summary %></p>
 <p>Cast: <% @cast_members.each do |cast_member| %></p>
-  <p><%= cast_member.name %> as
+  <ul>
+  <li><p><%= cast_member.name %> as
   <%= cast_member.role %></p>
+  </ul>
 <% end %>
 <p>Reviews 📝<% @reviews.each do |review| %></p>
   <p>Author: <%= review.author %></p>
