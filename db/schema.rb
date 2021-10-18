@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_10_12_203015) do
   create_table "attendees", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "party_id"
-    t.string "role"
+    t.string "role", default: "0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["party_id"], name: "index_attendees_on_party_id"
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 2021_10_12_203015) do
   end
 
   create_table "parties", force: :cascade do |t|
-    t.date "date"
-    t.time "time"
+    t.datetime "date"
+    t.datetime "time"
     t.string "movie_title"
     t.string "movie_runtime"
     t.datetime "created_at", null: false

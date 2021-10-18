@@ -24,7 +24,28 @@ RSpec.describe 'user dashboard page' do
    end
 
    within "#parties" do
-     expect(page).to have_content("Viewing Parties")
+
+     party = Party.create(date: 10/31/21, time: 1100)
+     # As an authenticated user,
+     # I should see the viewing parties I have been invited to with the following details:
+     # Movie Title, which links to the movie show page (later)
+     # Date and Time of Event
+     # who is hosting the event
+     # list of friends invited, with my name in bold
+
+     # I should also see the viewing parties that I have created with the following details:
+     # Movie Title, which links to the movie show page
+     # Date and Time of Event
+     # That I am the host of the party
+     # List of friends invited to the viewing party
+
+     expect(page).to have_content("All Viewing Parties")
+     expect(page).to have_content("No Upcoming Parties Scheduled 🤔")
+     # expect(page).to have_content(movie.title)
+     # expect(page).to have_content(party.date)
+     # expect(page).to have_content(party.time)
+     # expect(page).to have_content(current_user.email)
+     # expect(page).to have_content("My Viewing Parties:")
    end
  end
 
