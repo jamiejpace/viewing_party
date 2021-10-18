@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/11395?api_key=Private movie key&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 18 Oct 2021 00:11:31 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=28800
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 2eba06fa6ad6f1938f7879a06eb79fbbae702d0f
+      X-Memc-Age:
+      - '10934'
+      X-Memc-Expires:
+      - '3915'
+      Etag:
+      - W/"e96e23efabce869ee5792bb76a8f284c"
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 48ea53c7edffa2cdbdc32f7d94966344.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - Ix0zHLNXmFsNMuPfjkLhLmz4k7sa1XEBdjoipaHygNWF74wVtTU6pg==
+      Age:
+      - '178'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/wOoZPg0ZCJ1z1KZhVXRvX1eDZqb.jpg","belongs_to_collection":{"id":53159,"name":"The
+        Santa Clause Collection","poster_path":"/1h8iA6i2DpPhsHC65nUB2voVnm5.jpg","backdrop_path":"/oE29RMXjXApDsQkqhdewM9nb4zx.jpg"},"budget":22000000,"genres":[{"id":14,"name":"Fantasy"},{"id":18,"name":"Drama"},{"id":35,"name":"Comedy"},{"id":10751,"name":"Family"}],"homepage":"","id":11395,"imdb_id":"tt0111070","original_language":"en","original_title":"The
+        Santa Clause","overview":"Scott Calvin is an ordinary man, who accidentally
+        causes Santa Claus to fall from his roof on Christmas Eve and is knocked unconscious.
+        When he and his young son finish Santa''s trip and deliveries, they go to
+        the North Pole, where Scott learns he must become the new Santa and convince
+        those he loves that he is indeed, Father Christmas.","popularity":15.507,"poster_path":"/tBHDVtEcMl06FbCURRLGVg3TpXp.jpg","production_companies":[{"id":2,"logo_path":"/wdrCwmRnLFJhEoH8GSfymY85KHT.png","name":"Walt
+        Disney Pictures","origin_country":"US"},{"id":915,"logo_path":"/4neXXpjSJDZPBGBnfWtqysB5htV.png","name":"Hollywood
+        Pictures","origin_country":"US"},{"id":889,"logo_path":null,"name":"Outlaw
+        Productions","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
+        States of America"}],"release_date":"1994-11-11","revenue":189833357,"runtime":97,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"What
+        if your dad was Santa Claus?","title":"The Santa Clause","video":false,"vote_average":6.4,"vote_count":1452}'
+  recorded_at: Mon, 18 Oct 2021 00:14:29 GMT
+recorded_with: VCR 6.0.0

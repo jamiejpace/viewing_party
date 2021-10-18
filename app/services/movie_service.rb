@@ -12,6 +12,23 @@ class MovieService
       body[:results]
     end
 
+    def find_movie(id)
+      response = conn.get("/3/movie/#{id}?language=en-US")
+      JSON.parse(response.body, symbolize_names: true)
+    end
+
+    def find_cast(id)
+      response = conn.get("/3/movie/#{id}/credits?&language=en-US")
+      body = JSON.parse(response.body, symbolize_names: true)
+      body[:cast]
+    end
+
+    def find_reviews(id)
+      response = conn.get("/3/movie/#{id}/reviews?language=en-US&page=1")
+      body = JSON.parse(response.body, symbolize_names: true)
+      body[:results]
+    end
+
     private
 
     def conn

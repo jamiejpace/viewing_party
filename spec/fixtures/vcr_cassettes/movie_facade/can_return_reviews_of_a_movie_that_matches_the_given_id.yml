@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/2493/reviews?api_key=Private movie key&language=en-US&page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 18 Oct 2021 00:53:14 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=28800
+      X-Memc:
+      - MISS, STORE
+      X-Memc-Key:
+      - 2c92a86ac35462eee955f501b37c7d9ff049ed3f
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '16882'
+      Last-Modified:
+      - '2021-08-19 10:30:53 +0000'
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 ce4b35590464ed34415a13badd946ebb.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - dG1Kt8VhLzx0E3ZodMjEkvcnmOv7RyndtfMwESknsq4Dp42nyvf98Q==
+      Age:
+      - '94'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":2493,"page":1,"results":[{"author":"bigbassdrum","author_details":{"name":"","username":"bigbassdrum","avatar_path":null,"rating":10.0},"content":"The
+        Princess Bride is ultimately a story of love - of a grandather for his grandson,
+        of Inigo Montoya for his murdered father and between Buttercup and Wesley.  It
+        is an old fashioned fairy tale in a sense, but its imagination, wit and humour
+        stands it apart from convention.  The characters are endearing and essential
+        to the plot.  The pace of the film changes up and down beautifully throughout
+        and the script is a joy, playing with words and ideas.  Humanity prevails
+        in this wonderous tale, I learnt plenty from it as a child and I still watch
+        it from time to time to remind me of the goodness within us and the ability
+        to triumph over adversity.  The Princess Bride has a way of being traditional
+        whilst challenging norms and that is why I will always love it.  10/10 for
+        me.  The only criticism I have is that it is too male centric as many films
+        and series still are unfortunately.  Although, saying that, Buttercup is much
+        hardier than most princesses portrayed in children''s films.  This is a film
+        that appeals to adults and children alike.  Stop writing did you say?  As
+        you wish x","created_at":"2015-07-11T20:45:28.889Z","id":"55a18068c3a3681ce3001de7","updated_at":"2021-06-23T15:57:35.662Z","url":"https://www.themoviedb.org/review/55a18068c3a3681ce3001de7"}],"total_pages":1,"total_results":1}'
+  recorded_at: Mon, 18 Oct 2021 00:54:48 GMT
+recorded_with: VCR 6.0.0

@@ -10,12 +10,10 @@ RSpec.describe 'movies index page', :vcr do
     visit movies_path
 
     within "#movie-1" do
-      expect(page).to have_content("Title:")
       expect(page).to have_content("Vote Average:")
     end
 
     within "#movie-39" do
-      expect(page).to have_content("Title:")
       expect(page).to have_content("Vote Average:")
     end
   end

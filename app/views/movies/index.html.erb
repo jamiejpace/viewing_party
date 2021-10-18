@@ -16,7 +16,7 @@
   <% @movies.each_with_index do |movie, index| %>
     <div id="movie-<%= index %>">
       <center><img src="https://image.tmdb.org/t/p/w300<%= movie.poster %>" >
-      <h4>Title: <%= movie.title %> </h4>
+      <h4><%= link_to "#{movie.title}", movie_path(movie.id) %> </h4>
       <p>Vote Average: <%= movie.vote_average %></p><br></center>
       </div>
   <% end %>
