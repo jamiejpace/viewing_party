@@ -15,5 +15,6 @@ class MoviesController < ApplicationController
     @movie = MovieFacade.movie_details(params[:id])
     @cast_members = MovieFacade.movie_cast(params[:id]).take(10)
     @reviews = MovieFacade.movie_reviews(params[:id])
+    @trailer = MovieFacade.movie_trailer(params[:id])
   end
 end

@@ -33,4 +33,12 @@ RSpec.describe 'movies show page', :vcr do
 
     expect(current_path).to eq(new_party_path)
   end
+
+  it 'has a link to a trailer page' do
+    visit movie_path(335983)
+
+    click_link "View Trailer"
+
+    expect(current_path).to eq(trailer_path(335983))
+  end
 end

@@ -1,4 +1,9 @@
-<img src="https://image.tmdb.org/t/p/w300<%= @movie.poster %>" >
+<% if @trailer %>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @trailer %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<% else %>
+  <img src="https://image.tmdb.org/t/p/w300<%= @movie.poster %>" >
+<% end %>
+
 <h2>Title: <%= @movie.title %></h2>
 <%= button_to "Create a Viewing Party For This Movie!", new_party_path, method: :get %>
 <h4>Vote Average: <%= @movie.vote_average %></h4>
@@ -11,7 +16,7 @@
   <%= cast_member.role %></p>
   </ul>
 <% end %>
-<p>Reviews 📝<% @reviews.each do |review| %></p>
+<p><%= @reviews.count %> Reviews 📝<% @reviews.each do |review| %></p>
   <p>Author: <%= review.author %></p>
   <p><%= review.content %></p>
 <% end %>
