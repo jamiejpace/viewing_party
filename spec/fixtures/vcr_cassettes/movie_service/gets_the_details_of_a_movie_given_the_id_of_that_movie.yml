@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/335983?api_key=Private movie key&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 17 Oct 2021 17:11:32 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=28800
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 1b0aca9a41be1135e26fd0b689bc98e6c7e3ac65
+      X-Memc-Age:
+      - '11750'
+      X-Memc-Expires:
+      - '4045'
+      Etag:
+      - W/"05b96e066571827906c3e4f4279d0d56"
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 9204cf44179493ed42c678800a26918b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - G9OxX_dZXXa1MqWQSCuMepLeE1eU3rktm_KTWCaHr_eq61fvkaxqEg==
+      Age:
+      - '24505'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvVnV1a1pMZ2FDcmhvMkFyOFNjbDlIdFYzeUQuanBnIiwiYmVsb25nc190b19jb2xsZWN0aW9uIjp7ImlkIjo1NTgyMTYsIm5hbWUiOiJWZW5vbSBDb2xsZWN0aW9uIiwicG9zdGVyX3BhdGgiOiIvNjcweDlzZjBSdTh5NmV6QmdnbVl1ZHg2MXlCLmpwZyIsImJhY2tkcm9wX3BhdGgiOiIvcmhMc3BGQjFCOFpDa1dFSEZZbWMzTkthZ3pxLmpwZyJ9LCJidWRnZXQiOjExNjAwMDAwMCwiZ2VucmVzIjpbeyJpZCI6ODc4LCJuYW1lIjoiU2NpZW5jZSBGaWN0aW9uIn0seyJpZCI6MjgsIm5hbWUiOiJBY3Rpb24ifV0sImhvbWVwYWdlIjoiaHR0cDovL3d3dy52ZW5vbS5tb3ZpZS9zaXRlLyIsImlkIjozMzU5ODMsImltZGJfaWQiOiJ0dDEyNzA3OTciLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJWZW5vbSIsIm92ZXJ2aWV3IjoiSW52ZXN0aWdhdGl2ZSBqb3VybmFsaXN0IEVkZGllIEJyb2NrIGF0dGVtcHRzIGEgY29tZWJhY2sgZm9sbG93aW5nIGEgc2NhbmRhbCwgYnV0IGFjY2lkZW50YWxseSBiZWNvbWVzIHRoZSBob3N0IG9mIFZlbm9tLCBhIHZpb2xlbnQsIHN1cGVyIHBvd2VyZnVsIGFsaWVuIHN5bWJpb3RlLiBTb29uLCBoZSBtdXN0IHJlbHkgb24gaGlzIG5ld2ZvdW5kIHBvd2VycyB0byBwcm90ZWN0IHRoZSB3b3JsZCBmcm9tIGEgc2hhZG93eSBvcmdhbml6YXRpb24gbG9va2luZyBmb3IgYSBzeW1iaW90ZSBvZiB0aGVpciBvd24uIiwicG9wdWxhcml0eSI6MzM4My41NzcsInBvc3Rlcl9wYXRoIjoiLzJ1Tlc0V2JnQlhMMjVCQWJYR0xuTHFYNzFTdy5qcGciLCJwcm9kdWN0aW9uX2NvbXBhbmllcyI6W3siaWQiOjMxODI4LCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJBdmkgQXJhZCBQcm9kdWN0aW9ucyIsIm9yaWdpbl9jb3VudHJ5IjoiVVMifSx7ImlkIjo1MzQ2MiwibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiTWF0dCBUb2xtYWNoIFByb2R1Y3Rpb25zIiwib3JpZ2luX2NvdW50cnkiOiJVUyJ9LHsiaWQiOjg0MDQxLCJsb2dvX3BhdGgiOiIvWG1ITVBHemRJNWM0V0dYMVlseFU0czJ2N1QucG5nIiwibmFtZSI6IlBhc2NhbCBQaWN0dXJlcyIsIm9yaWdpbl9jb3VudHJ5IjoiVVMifSx7ImlkIjo3NTA1LCJsb2dvX3BhdGgiOiIvODM3Vk1NNHdPa09EYzFpZE54R1QwS1FKbGVqLnBuZyIsIm5hbWUiOiJNYXJ2ZWwgRW50ZXJ0YWlubWVudCIsIm9yaWdpbl9jb3VudHJ5IjoiVVMifSx7ImlkIjo4MTYyMCwibG9nb19wYXRoIjoiL2dOcDRkZnVCT1htVldkR0tiNjNOZmJGTmJGaS5wbmciLCJuYW1lIjoiVGVuY2VudCBQaWN0dXJlcyIsIm9yaWdpbl9jb3VudHJ5IjoiQ04ifV0sInByb2R1Y3Rpb25fY291bnRyaWVzIjpbeyJpc29fMzE2Nl8xIjoiQ04iLCJuYW1lIjoiQ2hpbmEifSx7Imlzb18zMTY2XzEiOiJVUyIsIm5hbWUiOiJVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EifV0sInJlbGVhc2VfZGF0ZSI6IjIwMTgtMDktMjgiLCJyZXZlbnVlIjo4NTUwMTM5NTQsInJ1bnRpbWUiOjExMiwic3Bva2VuX2xhbmd1YWdlcyI6W3siZW5nbGlzaF9uYW1lIjoiTWFuZGFyaW4iLCJpc29fNjM5XzEiOiJ6aCIsIm5hbWUiOiLmma7pgJror50ifSx7ImVuZ2xpc2hfbmFtZSI6IkVuZ2xpc2giLCJpc29fNjM5XzEiOiJlbiIsIm5hbWUiOiJFbmdsaXNoIn0seyJlbmdsaXNoX25hbWUiOiJNYWxheSIsImlzb182MzlfMSI6Im1zIiwibmFtZSI6IkJhaGFzYSBtZWxheXUifV0sInN0YXR1cyI6IlJlbGVhc2VkIiwidGFnbGluZSI6IlRoZSB3b3JsZCBoYXMgZW5vdWdoIFN1cGVyaGVyb2VzLiIsInRpdGxlIjoiVmVub20iLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6Ni44LCJ2b3RlX2NvdW50IjoxMTc1M30=
+  recorded_at: Sun, 17 Oct 2021 23:59:57 GMT
+recorded_with: VCR 6.0.0

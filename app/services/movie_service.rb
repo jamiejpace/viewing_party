@@ -14,7 +14,7 @@ class MovieService
 
     def find_movie(id)
       response = conn.get("/3/movie/#{id}?language=en-US")
-      body = JSON.parse(response.body, symbolize_names: true)
+      JSON.parse(response.body, symbolize_names: true)
     end
 
     def find_cast(id)
