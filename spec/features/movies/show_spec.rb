@@ -17,11 +17,20 @@ RSpec.describe 'movies show page', :vcr do
 
   it 'displays movie details' do
     visit movie_path(335983)
-    
+
     expect(page).to have_content("Title:")
+    expect(page).to have_button("Create a Viewing Party For This Movie!")
     expect(page).to have_content("Vote Average:")
     expect(page).to have_content("Runtime:")
     expect(page).to have_content("Summary:")
     expect(page).to have_content("Genre(s):")
+  end
+
+  it 'can redirect to the create a new party page' do
+    visit movie_path(335983)
+
+    click_button "Create a Viewing Party For This Movie!"
+
+    expect(current_path).to eq(new_party_path)
   end
 end

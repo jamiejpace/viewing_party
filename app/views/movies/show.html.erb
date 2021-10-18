@@ -1,5 +1,7 @@
 <img src="https://image.tmdb.org/t/p/w300<%= @movie.poster %>" >
-<p>Title: <%= @movie.title %></p>
+<h3>Title: <%= @movie.title %></h3>
+<div align="right">
+  <%= button_to "Create a Viewing Party For This Movie!", new_party_path, method: :get %>
 <p>Vote Average: <%= @movie.vote_average %></p>
 <p>Runtime: <%= @movie.runtime %> minutes</p>
 <p>Summary: <%= @movie.summary %></p>
