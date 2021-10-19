@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/10439/videos?api_key=Private movie key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 19 Oct 2021 01:49:13 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=28800
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 825a5bdfe5992c0eb31aaa227387453b03142255
+      X-Memc-Age:
+      - '462'
+      X-Memc-Expires:
+      - '16814'
+      Etag:
+      - W/"757230a6c53e31d427b8871403e6d82d"
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 ce4b35590464ed34415a13badd946ebb.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - 93Cx9ERD2EHRFt5Pt50SfZ52WToOcoPz9aWJOOdclaEC9lfzb37vsQ==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":10439,"results":[{"iso_639_1":"en","iso_3166_1":"US","name":"Hocus
+        Pocus (1993) Trailer","key":"OFm_2RyxXjQ","published_at":"2016-09-25 18:41:18
+        UTC","site":"YouTube","size":720,"type":"Trailer","official":false,"id":"58b76f78925141611900161f"},{"iso_639_1":"en","iso_3166_1":"US","name":"Hocus
+        Pocus - Movie Trailer - (1993)","key":"Oryofd_T-ng","published_at":"2010-03-22
+        16:43:27 UTC","site":"YouTube","size":360,"type":"Trailer","official":false,"id":"533ec66ac3a3685448001afa"}]}'
+  recorded_at: Tue, 19 Oct 2021 01:49:13 GMT
+recorded_with: VCR 6.0.0

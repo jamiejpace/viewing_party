@@ -34,11 +34,17 @@ RSpec.describe 'movies show page', :vcr do
     expect(current_path).to eq(new_party_path)
   end
 
-  it 'has a link to a trailer page' do
+  xit 'has an embedded trailer' do
+    visit movie_path(335983)
+    expect(page).to have_content("?")
+  end
+
+  it 'has a button fo find similar movies that routes to the movies page' do
     visit movie_path(335983)
 
-    click_link "View Trailer"
+    click_button "Not The One? Check Out Similar Moives!"
 
-    expect(current_path).to eq(trailer_path(335983))
+    expect(current_path).to eq(movies_path)
+    expect(page).to have_content("Aquaman")
   end
 end

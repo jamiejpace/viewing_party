@@ -49,4 +49,24 @@ RSpec.describe 'movie service', :vcr do
     expect(response.first).to have_key(:content)
     expect(response.first[:content]).to be_a(String)
   end
+
+  it 'gets the videos for a given movie' do
+    response = MovieService.find_videos(10439)
+
+    expect(response).to be_an(Array)
+    expect(response.first).to be_a(Hash)
+    expect(response.first).to have_key(:site)
+    expect(response.first[:site]).to be_a(String)
+    expect(response.first).to have_key(:type)
+    expect(response.first[:type]).to be_a(String)
+  end
+
+  it 'gets movie recommendations based on a given movie' do
+    response = MovieService.find_recommendations(10439)
+
+    expect(response).to be_an(Array)
+    expect(response.first).to be_a(Hash)
+    expect(response.first).to have_key(:title)
+    expect(response.first).to have_key(:vote_average)
+  end
 end

@@ -17,9 +17,8 @@ class Movie
   end
 
   def genre_names
-    genre_array = @genres.map do |genre|
+    @genres.map do |genre|
       genre[:name]
-    end
-    genre_array.join(', ')
+    end.join(', ')
   end
 end
