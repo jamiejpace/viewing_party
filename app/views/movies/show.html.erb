@@ -1,10 +1,23 @@
-<img src="https://image.tmdb.org/t/p/w300<%= @movie.poster %>" >
-<h2>Title: <%= @movie.title %></h2>
-<%= button_to "Create a Viewing Party For This Movie!", new_party_path, method: :get, params: {id: @movie.id} %>
-<h4>Vote Average: <%= @movie.vote_average %></h4>
+<br>
+<center><img src="https://image.tmdb.org/t/p/w300<%= @movie.poster %>" ></center><br>
+<div class="container p-3 my-3 border">
+  <div class="row">
+    <div class="col-sm">
+      <h2>Title: <%= @movie.title %></h2>
+    </div>
+    <div class="col-sm">
+      <%= button_to "Create a Viewing Party For This Movie!", new_party_path, method: :get, params: {id: @movie.id}, class: "btn btn-danger" %>
+    </div>
+    <div class="col-sm">
+      <h4>Vote Average: <%= @movie.vote_average %></h4>
+    </div>
+  </div>
+</div>
+
 <p>Runtime: <%= @movie.runtime %> minutes</p>
 <p>Genre(s): <%= @movie.genre_names %></p>
 <p>Summary: <%= @movie.summary %></p>
+<hr>
 <p>Cast: <% @cast_members.each do |cast_member| %></p>
   <ul>
   <li><p><%= cast_member.name %> as

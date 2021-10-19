@@ -13,19 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-
-footer {
-  display: flex;
-  align-self: baseline;
-  flex-direction: row;
-}
+ // Custom bootstrap variables must be set or imported *before* bootstrap.
+ @import "bootstrap";
+ 
