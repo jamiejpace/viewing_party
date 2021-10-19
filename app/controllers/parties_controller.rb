@@ -2,7 +2,7 @@ class PartiesController < ApplicationController
 
   def new
     @user = current_user
-    # @movie = MovieFacade.movie_details(params[:id])
+    @movie = MovieFacade.movie_details(params[:id])
   end
 
   def create

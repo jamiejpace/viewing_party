@@ -1,18 +1,23 @@
 <!-- <!% This should be updated to have @movie.title instead of "This Movie" %> -->
-<h1>Create a Viewing Party for movie_title </h1>
+<center><h1>Create a Viewing Party for <%= @movie.title %></h1>
+<img src="https://image.tmdb.org/t/p/w300<%= @movie.poster %>" >
+</center>
 <%= form_with url: user_dashboard_path(@user.id), method: :post, local: true do |f| %>
-<!-- <!%= f.hidden_field :movie_id, id: :movie_id, value: params[:movie_id] %> -->
-<%= f.label :movie_title, value: params[:movie_title] %> <br>
+<%= f.hidden_field :movie_id, id: :movie_id, value: @movie.id %>
 <%= f.label :date, "Party Date:" %>
 <%= f.date_field :date, min: Date.today %> <br>
-<%= f.label :runtime, "Movie Runtime:" %>
-<%= f.number_field :runtime, min: params[:runtime], max: 360, value: params[:runtime] %> <br>
+<%= f.label :runtime, "Party Duration:" %>
+<%= f.number_field :runtime, min: @movie.runtime, max: 360, value: @movie.runtime %> <br>
 <%= f.label :party_time, "Party Time:" %>
-<%= f.time_select :party_time, {minute_step: 15, ampm: true} %> <br>
+<%= f.time_select :party_time, {minute_step: 15, ampm: true} %>
 <br>
-<h4>Your Friends:</h4>
-<!-- <div id="attendee-<!%= attendee.id %>"> -->
-<!-- </div> -->
-<%= f.submit "Create a Party! 🥳" %>
-<br>
+<div id="friends">
+  <h4>Invite Your Friends:</h4>
+  <% @user.current_friends.each do |friend| %>
+    <div id="friend-<%= friend.id %>">
+      <p><%= check_box_tag 'invited[]', friend.email %> <%= friend.email %> </p>
+    </div>
+  <% end %>
+  <%= f.submit "Create a Party! 🥳" %>
+</div>
 <% end %>

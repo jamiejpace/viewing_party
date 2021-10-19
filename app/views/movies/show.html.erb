@@ -1,6 +1,6 @@
 <img src="https://image.tmdb.org/t/p/w300<%= @movie.poster %>" >
 <h2>Title: <%= @movie.title %></h2>
-<%= button_to "Create a Viewing Party For This Movie!", new_party_path, method: :get %>
+<%= button_to "Create a Viewing Party For This Movie!", new_party_path, method: :get, params: {id: @movie.id} %>
 <h4>Vote Average: <%= @movie.vote_average %></h4>
 <p>Runtime: <%= @movie.runtime %> minutes</p>
 <p>Genre(s): <%= @movie.genre_names %></p>
