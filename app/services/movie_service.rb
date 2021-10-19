@@ -17,6 +17,12 @@ class MovieService
       parse_json(response)
     end
 
+    def find_recommendations(id)
+      response = conn.get("/3/movie/#{id}/recommendations?language=en-US&page=1")
+      body = parse_json(response)
+      body[:results]
+    end
+
     def find_cast(id)
       response = conn.get("/3/movie/#{id}/credits?&language=en-US")
       body = parse_json(response)

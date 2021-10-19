@@ -6,6 +6,8 @@ class MoviesController < ApplicationController
                 []
               elsif params[:movie_search]
                 MovieFacade.movie_search(params[:movie_search])
+              elsif params[:recommendation_id]
+                MovieFacade.recommended_movies(params[:recommendation_id])
               else
                 MovieFacade.top_40_movies
               end

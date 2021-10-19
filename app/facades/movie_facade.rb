@@ -14,6 +14,13 @@ class MovieFacade
       end
     end
 
+    def recommended_movies(id)
+      data = MovieService.find_recommendations(id)
+      data.map do |movie_data|
+        Movie.new(movie_data)
+      end
+    end
+
     def movie_details(id)
       data = MovieService.find_movie(id)
       Movie.new(data)
@@ -43,7 +50,7 @@ class MovieFacade
     def movie_trailer(id)
       data = MovieService.find_videos(id)
       find_trailer = data.find do |video|
-        video[:site] == "YouTube"
+        video[:site] == "YouTube" && video[:type] == "Trailer"
       end
       if find_trailer
         find_trailer[:key]
