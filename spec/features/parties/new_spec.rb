@@ -56,17 +56,21 @@ RSpec.describe 'new party page' do
     expect(page).to have_content(@nico.email)
   end
 
-  it 'can display an error if valid information is not provided and/or friends are not invited' do
+  it 'can display an error if valid information is not provided and/or friends are not invited', :vcr do
     select '08 PM', :from => "[time(4i)]"
     select '00', :from => "[time(5i)]"
+
 
     within "#friend-#{@current_user.friends.first.id}" do
       check 'invited[]'
     end
     within "#friend-#{@current_user.friends.last.id}" do
       check 'invited[]'
-
-      expect
     end
+
+    click_on "Create a Party! 🥳"
+    
+    expect(current_path).to eq(movie_path(335983))
+    expect(page).to have_content("Could not create a party, please enter valid information and try again!")
   end
 end
