@@ -16,7 +16,7 @@
   <h4>Invite Your Friends:</h4>
   <% @user.current_friends.each do |friend| %>
     <div id="friend-<%= friend.id %>">
-      <p><%= check_box_tag 'invited[]', friend.email, id: 'invited[]' %> <%= friend.email %>  </p>
+      <p><%= check_box_tag 'invited[]', friend.email %> <%= friend.email %></p>
     </div>
   <% end %>
   <%= f.submit "Create a Party! 🥳" %>

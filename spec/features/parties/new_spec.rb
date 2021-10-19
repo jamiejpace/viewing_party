@@ -7,6 +7,7 @@ RSpec.describe 'new party page' do
     @nico = User.create!(email: "nico@sleepyboy.com", password_digest: "m30w198")
     @friendship = Friendship.create!(user_id: @current_user.id, friend_id: @bb.id)
     @friendship2 = Friendship.create!(user_id: @current_user.id, friend_id: @nico.id)
+    @party = Party.create(movie_title: "Venom", date: '2021-10-31 20:00:00 -0600', time: '2021-10-31 20:00:00 -0600', movie_runtime: 112)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@current_user)
 
     visit movie_path(335983)
@@ -45,16 +46,27 @@ RSpec.describe 'new party page' do
     end
 
     click_on "Create a Party! 🥳"
+
     expect(current_path).to eq(user_dashboard_path(@current_user.id))
-    # expect(page).to have_content("Host: #{@current_user.email}")
-    # expect(page).to have_content("Date: #{ApplicationRecord.format_date(@party.event_date)}")
-    # expect(page).to have_content("Host: #{ApplicationRecord.format_time(@party.event_time)}")
-    #
-    # within(first('#attendees')) do
-    #   #attendee.user.email
-    # expect(page).to have_content(@current_user.email)
-    # expect(page).to have_content(@bb.email)
-    # expect(page).to have_content(@nico.email)
-    # end
+    expect(page).to have_content("Host: #{@current_user.email}")
+    expect(page).to have_content("Date: October 31, 2021")
+    expect(page).to have_content("Time: 08:00 PM")
+    expect(page).to have_content(@current_user.email)
+    expect(page).to have_content(@bb.email)
+    expect(page).to have_content(@nico.email)
+  end
+
+  it 'can display an error if valid information is not provided and/or friends are not invited' do
+    select '08 PM', :from => "[time(4i)]"
+    select '00', :from => "[time(5i)]"
+
+    within "#friend-#{@current_user.friends.first.id}" do
+      check 'invited[]'
+    end
+    within "#friend-#{@current_user.friends.last.id}" do
+      check 'invited[]'
+
+      expect
+    end
   end
 end
