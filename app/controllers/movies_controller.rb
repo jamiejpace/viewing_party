@@ -6,6 +6,8 @@ class MoviesController < ApplicationController
                 []
               elsif params[:movie_search]
                 MovieFacade.movie_search(params[:movie_search])
+              elsif params[:recommendation_id]
+                MovieFacade.recommended_movies(params[:recommendation_id])
               else
                 MovieFacade.top_40_movies
               end
@@ -15,5 +17,6 @@ class MoviesController < ApplicationController
     @movie = MovieFacade.movie_details(params[:id])
     @cast_members = MovieFacade.movie_cast(params[:id]).take(10)
     @reviews = MovieFacade.movie_reviews(params[:id])
+    @trailer = MovieFacade.movie_trailer(params[:id])
   end
 end
