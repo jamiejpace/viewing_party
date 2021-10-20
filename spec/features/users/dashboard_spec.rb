@@ -34,6 +34,12 @@ RSpec.describe 'user dashboard page' do
    expect(current_path).to eq(discover_path)
  end
 
+ it 'can log out user and redicrect to welcome page' do
+   click_on "Logout"
+
+   expect(current_path).to eq(root_path)
+ end
+
  it 'can add a friend to page and display added friend email' do
   User.create!(email: "bb@aol.com", password_digest: "meow89234b")
   fill_in :email, with: "bb@aol.com"

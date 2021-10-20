@@ -19,8 +19,15 @@
  body {
   background-color: #141414;
   color: #fff;
-  padding: 40px;
+  font-family: Didot, serif;
  }
+
+ hr {
+       height: 1px;
+       background-color: #3E9C87;
+       border: none;
+    }
+
 
 .btn {
 	background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
@@ -28,14 +35,13 @@
   box-sizing: border-box;
 	color: #fff;
 	display: block;
-	font: 1.125rem 'Oswald', Arial, sans-serif; /*18*/
-	height: 20px;
-	letter-spacing: 1px;
+	font: 1.125rem Didot, serif; /*18*/
+	height: 32px;
+	letter-spacing: 0.1px;
 	margin: 0 auto;
 	padding: 4px;
 	position: relative;
   text-decoration: none;
-	text-transform: uppercase;
 	width: 132px;
 	z-index: 2;
 }
@@ -47,7 +53,7 @@
 .btn span {
 	align-items: center;
 	background: #e7e8e9;
-	border-radius: 40px;
+	border-radius: 10px;
 	display: flex;
 	justify-content: center;
 	height: 100%;
@@ -57,4 +63,13 @@
 
 .btn:hover span {
 	background: transparent;
+}
+
+input, textarea{
+    background-color:#666;
+    color: #FFF;
+}
+
+footer {
+  padding: 10px
 }

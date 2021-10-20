@@ -1,6 +1,24 @@
+<br>
+<div id="#discover_search" align="right">
+  <div class="container">
+    <div class="row">
+      <div class="col" align="left">
+        <%= button_to "Discover Top 40 Movies!", movies_path, method: :get %>
+      </div>
+      <div class="col" align="right">
+        <%= form_with url: movies_path, method: :get, local: true do |f| %>
+        <%= f.text_field :movie_search, value: "Search By Movie Title", required: true %>
+        <%= f.submit 'Find Movies' %>
+        <% end %><br>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
 <div align="center">
 <h2>Your Search Results:</h2>
 </div>
+
 <div id="#discover_search" align="right">
   <%= button_to "Discover Top 40 Movies!", movies_path, method: :get %>
 <%= form_with url: movies_path, method: :get, local: true do |f| %>
@@ -26,3 +44,5 @@
   </div>
   </div>
 <% end %>
+<br>
+<hr>
