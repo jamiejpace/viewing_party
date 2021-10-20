@@ -9,7 +9,7 @@ RSpec.describe 'movie discover page', :vcr do
 
   it 'can display discover sections' do
     expect(page).to have_button("Discover Top 40 Movies!")
-    expect(page).to have_field(:movie_search)
+    expect(page).to have_field(:movie_search, with: "Search By Movie Title")
     expect(page).to have_button("Find Movies")
   end
 
@@ -18,7 +18,7 @@ RSpec.describe 'movie discover page', :vcr do
 
     expect(current_path).to eq(movies_path)
     expect(page).to have_button("Discover Top 40 Movies!")
-    expect(page).to have_field(:movie_search)
+    expect(page).to have_field(:movie_search, with: "Search By Movie Title")
     expect(page).to have_button("Find Movies")
   end
 end

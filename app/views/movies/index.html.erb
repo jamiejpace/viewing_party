@@ -18,15 +18,6 @@
 <div align="center">
 <h2>Your Search Results:</h2>
 </div>
-
-<div id="#discover_search" align="right">
-  <%= button_to "Discover Top 40 Movies!", movies_path, method: :get %>
-<%= form_with url: movies_path, method: :get, local: true do |f| %>
-  <%= f.text_field :movie_search, placeholder: "Search By Movie Title", required: true %>
-  <%= f.submit 'Find Movies' %>
-  </div>
-<% end %><br>
-
 <% if @movies.empty? %>
   <p><center><%= "No Search Results Found 😿" %></center></p>
 <% else %>

@@ -17,10 +17,10 @@ RSpec.describe "welcome page" do
   end
 
   it "can redirect to user log in page" do
-    fill_in "email", with: @user.email
-    fill_in "password", with: @user.password
+    fill_in :email, with: @user.email
+    fill_in :password, with: @user.password
 
-    click_on "Log In"
+    click_button "Log In"
 
     expect(current_path).to eq(user_dashboard_path(@user.id))
     expect(page).to have_content("Successfully logged in!")
