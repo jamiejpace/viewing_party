@@ -11,5 +11,4 @@ class User < ApplicationRecord
   def current_friends
     friends.distinct
   end
-
 end

@@ -47,18 +47,4 @@ RSpec.describe 'movies index page', :vcr do
     expect(current_path).to eq(movies_path)
     expect(page).to have_content('No Search Results Found 😿')
   end
-
-  # Can also test for non ASCII (en-us) language characters
-  # considering they can show up in search results (ex. Déjà Vu)
-  xit 'displays an error message when nothing is entered into the field' do
-    visit movies_path
-
-    click_on 'Find Movies'
-
-    message = page.find('#discover_search').native.attribute("validationMessage")
-
-    expect(current_path).to eq(movies_path)
-    # expect(page).to have_button("Find Movies", disabled: true)
-    expect(message).to eq("Please fill out this field.")
-  end
 end
