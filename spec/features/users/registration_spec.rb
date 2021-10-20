@@ -7,9 +7,9 @@ RSpec.describe 'user registration page' do
   end
 
   it 'can display registration form' do
-    expect(page).to have_content("Email:")
-    expect(page).to have_content("Password:")
-    expect(page).to have_content("Password Confirmation:")
+    expect(page).to have_content("Email")
+    expect(page).to have_content("Password")
+    expect(page).to have_content("Password confirmation")
     expect(page).to have_content("Register")
     expect(page).to have_link("Already Registered? Login Here")
   end

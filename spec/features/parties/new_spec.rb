@@ -15,16 +15,6 @@ RSpec.describe 'new party page' do
   end
 
   it 'displays the movie title and all form information', :vcr do
-#  As an authenticated user,
-#   When I visit the new viewing party page,
-#   I should see the name of the movie title rendered above a form with the following fields: x
-#     Duration of Party with a default value of movie runtime in minutes; a viewing party should NOT be created if set to a value less than the duration of the movie x
-#     When: field to select date x
-#     Start Time: field to select time x
-#     Checkboxes next to each friend (if user has friends) x
-#     Button to create a party x
-#   When the party is created, the authenticated user should be redirected back to the dashboard where the new event is shown. The event should also be seen by any friends that were invited when they log in.
-
     expect(page).to have_content("Create a Viewing Party for")
     expect(page).to have_content("Party Date:")
     expect(page).to have_content("Party Duration:")
@@ -69,7 +59,7 @@ RSpec.describe 'new party page' do
     end
 
     click_on "Create a Party! 🥳"
-    
+
     expect(current_path).to eq(movie_path(335983))
     expect(page).to have_content("Could not create a party, please enter valid information and try again!")
   end

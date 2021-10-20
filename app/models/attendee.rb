@@ -4,5 +4,5 @@ class Attendee < ApplicationRecord
 
   validates :role, presence: true
 
-  enum role: [:guest, :host]
+  enum role: { guest: 0, host: 1 }
 end

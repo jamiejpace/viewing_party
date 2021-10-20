@@ -50,11 +50,9 @@ class MovieFacade
     def movie_trailer(id)
       data = MovieService.find_videos(id)
       find_trailer = data.find do |video|
-        video[:site] == "YouTube" && video[:type] == "Trailer"
+        video[:site] == 'YouTube' && video[:type] == 'Trailer'
       end
-      if find_trailer
-        find_trailer[:key]
-      end
+      return find_trailer[:key] if find_trailer
     end
   end
 end
