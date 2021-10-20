@@ -1,22 +1,21 @@
-<div id="header">
+<br></br>
   <h1 style="text-align: center">Welcome to Viewing Party!</h1>
-</div>
-
-<div id="welcome-message">
+<div id="welcome-message" style="margin: 20px auto; width: 600px; padding: 20px; background-color: #333B3F; border-radius: 10px; position: relative;">
   <h4 style="text-align: center">Viewing Party is an application in which users can explore movie options and create a viewing party event for the user and friends.</h4>
-</div>
-
+<section class="py-5 text-center container">
 <div id="login-form">
-  <center>
-    <br>
-  <%= form_with url: login_path, method: :post, local: true do |f| %>
-  <%= f.label :email, "Email:" %>
-  <%= f.text_field :email %><br>
-  <%= f.label :password, "Password:" %>
-  <%= f.password_field :password %><br>
-  <%= f.submit "Log In", :class => 'btn'  %>
-  <% end %>
-  <br>
-  <%= link_to "Register for an Account", registration_path %>
-  </center>
+  <%= bootstrap_form_with url: login_path, method: :post, local: true do |f| %>
+  <div class="row">
+    <div class="col">
+      <%= f.text_field :email %><br>
+    </div>
+      <div class="col">
+        <%= f.password_field :password %><br>
+      </div>
+  </div>
+  <%= f.submit "Log In", :class => 'btn' %>
 </div>
+<br></br>
+<%= link_to "Register for an Account", registration_path %>
+</div>
+<% end %>

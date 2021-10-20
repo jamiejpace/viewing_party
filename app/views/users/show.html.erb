@@ -6,7 +6,7 @@
 <div id="friends">
   <h3>Friends</h3>
   <%= form_with url: user_friendships_path(@user.id), local: true do |f| %>
-    <%= f.text_field :email, :value => "Friend's Email" %>
+    <%= f.text_field :email, :placeholder => "Friend's Email" %>
     <%= f.submit 'Add Friend' %>
   <% end %>
   <% if @user.friends.empty? %>
