@@ -3,7 +3,7 @@
 <%= button_to "Discover Top 40 Movies!", movies_path, method: :get %>
 <br>
 <%= form_with url: movies_path, method: :get, local: true do |f| %>
-  <%= f.text_field :movie_search, placeholder: "Search By Movie Title", required: true %>
+  <%= f.text_field :movie_search, value: "Search By Movie Title", required: true %>
   <%= f.submit 'Find Movies' %>
 <% end %>
 </center>

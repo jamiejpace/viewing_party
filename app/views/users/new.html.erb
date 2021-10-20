@@ -1,21 +1,11 @@
 <section class="py-5 text-center container">
 <h1>Register for an Account</h1>
-<br></br>
 <%= bootstrap_form_with url: users_path, method: :post, local: true do |f| %>
-<div class="row">
-  <div class="col">
-    <%= f.text_field :email %>
-  </div>
-    <div class="col">
-      <%= f.password_field :password %>
-    </div>
-      <div class="col">
-        <%= f.password_field :password_confirmation %>
-      </div>
-</div>
-<br></br>
-<%= f.submit 'Register' %>
+  <%= f.text_field :email %>
+  <%= f.password_field :password %>
+  <%= f.password_field :password_confirmation %>
+  <%= f.submit 'Register' %>
 <% end %>
-<br></br>
+
 <p><%= link_to "Already Registered? Login Here", root_path %></p>
 </section>
