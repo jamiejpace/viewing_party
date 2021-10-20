@@ -53,4 +53,24 @@ RSpec.describe 'movie facade', :vcr do
     expect(movie.first.author).to be_a(String)
     expect(movie.first.content).to be_a(String)
   end
+
+  it 'can return a collection of recommended movies' do
+    movies = MovieFacade.recommended_movies(11395)
+
+    expect(movies).to be_an(Array)
+    expect(movies.first).to be_a(Movie)
+    expect(movies.last).to be_a(Movie)
+  end
+
+  it 'can return a URI string parameter for a YouTube video' do
+    trailer = MovieFacade.movie_trailer(11395)
+
+    expect(trailer).to be_a(String)
+  end
+
+  it 'can return nil if no YouTube videos available' do
+    trailer = MovieFacade.movie_trailer(41807)
+
+    expect(trailer).to be nil
+  end
 end

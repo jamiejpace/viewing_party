@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/41807/videos?api_key=Private movie key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 18 Oct 2021 22:29:19 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=28800
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - adee305f5071c2f4ac8a5ec81cff384c58f9f4d8
+      X-Memc-Age:
+      - '9050'
+      X-Memc-Expires:
+      - '6952'
+      Etag:
+      - W/"61580278c728f1608fd2f39c2debb256"
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 c55bfc9d9a95cdee8e23989feddaa4b3.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - x4b2SbDR1q30P6fPpsM1ymxzKeahKr-WVBjvyVnvZxP-myj_D5IoLQ==
+      Age:
+      - '11403'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":41807,"results":[]}'
+  recorded_at: Tue, 19 Oct 2021 01:39:22 GMT
+recorded_with: VCR 6.0.0

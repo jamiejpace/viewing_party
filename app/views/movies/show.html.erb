@@ -1,5 +1,9 @@
-<br>
-<center><img src="https://image.tmdb.org/t/p/w300<%= @movie.poster %>" ></center><br>
+<% if @trailer %>
+  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @trailer %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+<% else %>
+  <center><img src="https://image.tmdb.org/t/p/w300<%= @movie.poster %>" ></center><br>
+<% end %>
+
 <div class="container p-3 my-3 border">
   <div class="row">
     <div class="col-sm">
@@ -7,6 +11,9 @@
     </div>
     <div class="col-sm">
       <%= button_to "Create a Viewing Party For This Movie!", new_party_path, method: :get, params: {id: @movie.id}, class: "btn btn-danger" %>
+    </div>
+    <div class="col-sm">
+      <%= button_to "Not The One? Check Out Similar Moives!", movies_path, method: :get, params: {recommendation_id: @movie.id}%>
     </div>
     <div class="col-sm">
       <h4>Vote Average: <%= @movie.vote_average %></h4>
@@ -24,7 +31,7 @@
   <%= cast_member.role %></p>
   </ul>
 <% end %>
-<p>Reviews 📝<% @reviews.each do |review| %></p>
+<p><%= @reviews.count %> Reviews 📝<% @reviews.each do |review| %></p>
   <p>Author: <%= review.author %></p>
   <p><%= review.content %></p>
 <% end %>

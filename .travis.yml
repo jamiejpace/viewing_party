@@ -11,3 +11,6 @@ deploy:
   api_key: bf7f9f535c5e476a3abfc29db567222c
   app: superviewingparty
   run: rails db:migrate
+env:
+  global:
+    - API_KEY: "bf7f9f535c5e476a3abfc29db567222c"
