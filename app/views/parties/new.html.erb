@@ -1,2 +1,24 @@
 <!-- <!% This should be updated to have @movie.title instead of "This Movie" %> -->
-<h1>Create a Viewing Party for movie_name </h1>
+<center><h1>Create a Viewing Party for <%= @movie.title %></h1>
+<img src="https://image.tmdb.org/t/p/w300<%= @movie.poster %>" >
+</center>
+<%= form_with url: parties_path, method: :post, local: true do |f| %>
+<%= f.hidden_field :movie_id, value: @movie.id %>
+<%= f.hidden_field :movie_title, value: @movie.title %>
+<%= f.label :date, "Party Date:" %>
+<%= f.date_field :date, min: Date.today %> <br>
+<%= f.label :movie_runtime, "Party Duration:" %>
+<%= f.number_field :movie_runtime, min: @movie.runtime, max: 360, value: @movie.runtime %> <br>
+<%= f.label :time, "Party Time:" %>
+<%= f.time_select :time, {minute_step: 15, ampm: true} %>
+<br>
+<div id="friends">
+  <h4>Invite Your Friends:</h4>
+  <% @user.current_friends.each do |friend| %>
+    <div id="friend-<%= friend.id %>">
+      <p><%= check_box_tag 'invited[]', friend.email %> <%= friend.email %></p>
+    </div>
+  <% end %>
+  <%= f.submit "Create a Party! 🥳" %>
+</div>
+<% end %>

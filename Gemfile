@@ -17,7 +17,10 @@ gem 'bootsnap'
 gem 'faraday'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
-gem 'email_validator' 
+gem 'email_validator'
+gem 'bootstrap', '~> 4.0.0'
+gem "bootstrap_form", "~> 4.0"
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'pry'
