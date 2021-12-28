@@ -114,9 +114,6 @@ Find the [project spec here](https://backend.turing.edu/module3/projects/viewing
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-#### Endpoints
-
-[Backend Endpoints](www.github.com) <-- Enter Endpoints Here Through GitHub Wiki
 
 #### <ins>Project Configurations</ins>
 
@@ -138,14 +135,6 @@ Find the [project spec here](https://backend.turing.edu/module3/projects/viewing
     Created database 'viewing_party_development'
     Created database 'viewing_party_test'
     ```
-
-* API Access
-  - Request an API key from...
-
-      ```bash
-      Code Optional Here
-      ```
-
 
 
 * How to run the test suite:
@@ -169,5 +158,3 @@ Find the [project spec here](https://backend.turing.edu/module3/projects/viewing
 
 * [Heroku Deployment](https://superviewingparty.herokuapp.com/), for production
 
-#### Future Features
-(Can include extensions, etc.)
